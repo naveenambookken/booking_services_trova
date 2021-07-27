@@ -2,6 +2,7 @@ import SlideBar from "./components/SlideBar/SlideBar"
 import Tabbar from "./components/Tabbar/Tabbar"
 import Topbar from "./components/Topbar/Topbar"
 import './App.css'
+import Request from "./components/Request/Request"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Topbar/>
       <Tabbar/>
       <SlideBar/>
+      <Request/>
     </div>
   );
 }
