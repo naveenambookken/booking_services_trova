@@ -1,0 +1,12 @@
+.carousel-item img{
+    padding: 10px;
+}
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: black !important;
+}
+.carousel-indicators{
+    margin-bottom: -1rem !important;
+}
