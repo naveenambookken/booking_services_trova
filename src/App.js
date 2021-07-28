@@ -1,20 +1,38 @@
-import SlideBar from "./components/SlideBar/SlideBar"
-import Tabbar from "./components/Tabbar/Tabbar"
-import Topbar from "./components/Topbar/Topbar"
 import './App.css'
 import Request from "./components/Request/Request"
 import Services from "./components/Servicces/Services"
 import Payment from "./components/Payment/Payment"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home"
 
 function App() {
   return (
     <div className="App">
-      <Topbar/>
-      <Tabbar/>
-      <SlideBar/>
-      <Request/>
-      <Services/>
-      <Payment/>
+    
+      
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/request">
+            <Home />
+            <Request/>
+          </Route>
+          <Route path="/services">
+            <Home />
+            <Services/>
+          </Route>
+          <Route path="/payment">
+            <Home />
+            <Payment/>
+          </Route>
+        </Switch>
+      </Router>
+      
+      
+      
+      
     </div>
   );
 }

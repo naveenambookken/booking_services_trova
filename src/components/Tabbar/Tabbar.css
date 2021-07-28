@@ -9,16 +9,29 @@
   align-items: center;
 }
 .menus {
+  position: relative;
   flex: 6;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menus p {
+.menus a {
   margin: 0px;
   padding: 0px;
+  text-decoration: none;
   color: white;
   font-size: larger;
-  margin-right: 20px;
+  margin-left: 20px;
   cursor: pointer;
+  
+  
 }
+.menus p:hover{
+  border-bottom: 2px solid white;
+  
+}
+.link{
+  border-bottom: 2px solid white;
+
+}
+
