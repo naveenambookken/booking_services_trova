@@ -12,6 +12,7 @@ import {
   import ScheduleIcon from '@material-ui/icons/Schedule';
   import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
   import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import StepProgress from "../StepProgres/StepProgress";
   
   
   const useStyles = makeStyles({
@@ -86,9 +87,15 @@ import {
     return (
       <div className={classes.root} >
           <Paper elevation={10} className={classes.paperStyle}>
+           <div style={{display:"flex", justifyContent:"space-between"}}>
            <div className="titlecard">
               <h4 className={classes.cardTitle} >Upcoming Service</h4>
               <p className={classes.fadeText}>10:22 am, 12/01/2019</p>
+           </div>
+           <div>
+
+           <StepProgress step="1"/>
+           </div>
            </div>
            <div className={classes.profile}>
            <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>

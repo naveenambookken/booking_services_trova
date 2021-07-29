@@ -10,6 +10,7 @@ import {
   import React from "react";
   import MonetizationOnOutlinedIcon from '@material-ui/icons/MonetizationOnOutlined';
   import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import StepProgress from "../StepProgres/StepProgress";
   
   
   const useStyles = makeStyles({
@@ -92,10 +93,17 @@ import {
     return (
       <div className={classes.root} >
           <Paper elevation={10} className={classes.paperStyle}>
+          <div style={{display:"flex", justifyContent:"space-between"}}>
+            
            <div className="titlecard">
               <h4 className={classes.cardTitle} >Pending Payment</h4>
               <p className={classes.fadeText}>10:22 am, 12/01/2019</p>
            </div>
+           <div>
+
+           <StepProgress step="2"/>
+           </div>
+          </div>
            <div className={classes.profile}>
            <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
            <Avatar className={classes.avatarStyle} alt="Remy Sharp" src="https://remysharp.com/images/remy-2017.jpg" />
