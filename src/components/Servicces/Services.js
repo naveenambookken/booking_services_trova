@@ -133,8 +133,8 @@ import StepProgress from "../StepProgres/StepProgress";
             </p>
            </div>
            <div style={{fontWeight:"bold",marginTop:"30px",paddingBottom:"20px",display:"flex",justifyContent:"space-around"}}>
-             <Button variant="contained" size="large" className={classes.btn}>Reschedule</Button>
-             <Button variant="contained" size="large" className={classes.btn}>Accept Request</Button>
+             <Button variant="contained" size="large" className={classes.btn}>CheckIn</Button>
+             <Button variant="contained" size="large" className={classes.btn}>Generate invoice</Button>
              <div style={{color:"#0d6efd",}}>
                <IconButton style={{color:"#0d6efd",padding:"0px"}}>
                  <span style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
