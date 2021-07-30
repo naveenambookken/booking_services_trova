@@ -12,6 +12,8 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import StepProgress from "../StepProgres/StepProgress";
+import { useState } from "react";
+
 
 
 const useStyles = makeStyles({
@@ -90,7 +92,13 @@ const useStyles = makeStyles({
 });
 
 function Request() {
+
+  const [status, setstatus] = useState(0)
   const classes = useStyles();
+
+const handleSubmit =()=>setstatus(1)
+
+
   return (
     <div className={classes.root} >
         <Paper elevation={10} className={classes.paperStyle}>
@@ -103,7 +111,7 @@ function Request() {
          <div>
 
 
-         <StepProgress step="0"/>
+         <StepProgress status={status}/>
          </div>
         </div>
          <div className={classes.profile}>
@@ -149,7 +157,7 @@ function Request() {
          </div>
          <div style={{fontWeight:"bold",marginTop:"30px",paddingBottom:"20px",display:"flex",justifyContent:"space-around"}}>
            <Button variant="outlined" size="large" className={classes.btn1}>Reschedule</Button>
-           <Button variant="contained" size="large" className={classes.btn2}>Accept Request</Button>
+           <Button variant="contained" size="large" className={classes.btn2} onClick={handleSubmit }>Accept Request</Button>
            <div style={{color:"#0d6efd",}}>
              <IconButton style={{color:"#0d6efd",padding:"0px"}}>
                <span style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>

@@ -13,6 +13,7 @@ import {
   import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
   import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import StepProgress from "../StepProgres/StepProgress";
+import { useState } from "react";
   
   
   const useStyles = makeStyles({
@@ -83,7 +84,10 @@ import StepProgress from "../StepProgres/StepProgress";
   });
   
   function Services() {
+    const [status, setstatus] = useState(1)
     const classes = useStyles();
+
+    const handleSubmit =()=>setstatus(2)
     return (
       <div className={classes.root} >
           <Paper elevation={10} className={classes.paperStyle}>
@@ -94,7 +98,7 @@ import StepProgress from "../StepProgres/StepProgress";
            </div>
            <div>
 
-           <StepProgress step="1"/>
+           <StepProgress status={status}/>
            </div>
            </div>
            <div className={classes.profile}>
@@ -134,7 +138,7 @@ import StepProgress from "../StepProgres/StepProgress";
            </div>
            <div style={{fontWeight:"bold",marginTop:"30px",paddingBottom:"20px",display:"flex",justifyContent:"space-around"}}>
              <Button variant="contained" size="large" className={classes.btn}>CheckIn</Button>
-             <Button variant="contained" size="large" className={classes.btn}>Generate invoice</Button>
+             <Button variant="contained" size="large" className={classes.btn} onClick={handleSubmit }>Generate invoice</Button>
              <div style={{color:"#0d6efd",}}>
                <IconButton style={{color:"#0d6efd",padding:"0px"}}>
                  <span style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>

@@ -11,6 +11,7 @@ import {
   import MonetizationOnOutlinedIcon from '@material-ui/icons/MonetizationOnOutlined';
   import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import StepProgress from "../StepProgres/StepProgress";
+import { useState } from "react";
   
   
   const useStyles = makeStyles({
@@ -89,7 +90,9 @@ import StepProgress from "../StepProgres/StepProgress";
   });
   
   function Payment() {
+    const [status, setstatus] = useState(2)
     const classes = useStyles();
+    const handleSubmit =()=>setstatus(3)
     return (
       <div className={classes.root} >
           <Paper elevation={10} className={classes.paperStyle}>
@@ -101,7 +104,7 @@ import StepProgress from "../StepProgres/StepProgress";
            </div>
            <div>
 
-           <StepProgress step="2"/>
+           <StepProgress status={status}/>
            </div>
           </div>
            <div className={classes.profile}>
@@ -141,7 +144,7 @@ import StepProgress from "../StepProgres/StepProgress";
            
            <div style={{fontWeight:"bold",marginTop:"30px",paddingBottom:"20px",display:"flex",justifyContent:"space-around"}}>
              <Button variant="outlined" size="large" className={classes.btn1}>Start a Chat</Button>
-             <Button variant="contained" size="large" className={classes.btn2}>Resend Invoice</Button>
+             <Button variant="contained" size="large" className={classes.btn2} onClick={handleSubmit } >Resend Invoice</Button>
              <div style={{color:"#0d6efd",}}>
                <IconButton style={{color:"#0d6efd",padding:"0px"}}>
                  <span style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>

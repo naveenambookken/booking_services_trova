@@ -37,7 +37,7 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepProgress({step}) {
+export default function StepProgress({status}) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
@@ -56,7 +56,7 @@ export default function StepProgress({step}) {
 
   return (
     <div className={classes.root}>
-      <Stepper activeStep={step} alternativeLabel >
+      <Stepper activeStep={status} alternativeLabel >
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
